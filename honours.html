@@ -3,44 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eagles Football Club - Honours</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Honours - Eagles Football Club</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Header -->
     <header class="main-header">
-        <div class="logo">
-            <img src="eagle fc.png" alt="Eagles FC Logo" width="200px">
+        <div class="container">
+            <div class="logo">
+                <img src="eagle fc.png" alt="Eagles FC Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="honour.html">Honours</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="village.html">Our Village</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="honours.html">Honours</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="news.html">News & Our Village</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Honours Section -->
-    <section class="honours">
-        <h1>Honours</h1>
-        <div class="honours-grid">
+    <section class="honours hero">
+        <div class="container">
+            <h1>Our Honours</h1>
+            <p>Celebrating our journey and achievements on the field</p>
+        </div>
+    </section>
+
+    <!-- Honours Content Section -->
+    <section class="honours-details">
+        <div class="container honours-grid">
+            
+            <!-- Champions Section -->
             <div class="honour">
-                <img src="champions.png" alt="Champions" class="circle" width="150px">
+                <img width="150px" src="champions.png" alt="Champions" class="circle">
                 <h3>Champions</h3>
                 <p>EagleFC has proudly claimed 5 championship titles, with one in 2019, two in 2020, and two more in 2021. These victories reflect our team's consistent growth and dominance on the field over the years.</p>
             </div>
+
+            <!-- Runner-up Section -->
             <div class="honour">
-                <img src="runnerup.png" alt="Runner-up" class="circle" width="150px">
+                <img width="150px" src="runnerup.png" alt="Runner-up" class="circle">
                 <h3>Runner-up</h3>
-                <p>EagleFC has also been runner-up in 4 tournaments, once in 2020 and three times in 2021. These close finishes highlight our team's competitive spirit and determination.</p>
+                <p>We have also finished as runners-up in 4 tournaments, once in 2020 and three times in 2021. These close finishes highlight our team's competitive spirit and determination.</p>
             </div>
+
+            <!-- Born to Win Section -->
             <div class="honour">
-                <img src="efc.png" alt="Born To Win" class="circle" width="150px">
-                <h3>Born To Win</h3>
-                <p>At EagleFC, we firmly believe in trusting the process, knowing that consistent effort and dedication lead to success. Every challenge we face strengthens our resolve.</p>
+                <img width="150px" src="runnerup.png" alt="Born to Win" class="circle">
+                <h3>Born to Win</h3>
+                <p>At EagleFC, we believe in trusting the process. Consistent effort and dedication lead to success. Every challenge we face strengthens our resolve, and we are confident that our hard work will continue to yield great results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Shots Section -->
+    <section class="action-shots">
+        <div class="container">
+            <h2>Memorable Moments</h2>
+            <div class="action-grid">
+                <div class="action-item">
+                    <img width="300" height="180px" src="eurocopa.png" alt="Football Action 1">
+                    <p>Victory celebration in the 2021 championship final.</p>
+                </div>
+                <div class="action-item">
+                    <img width="300" height="180px" src="lineup.png" alt="Football Action 2">
+                    <p>Team effort leading to our final goal of the match.</p>
+                </div>
+                <div class="action-item">
+                    <img width="300" height="180px" src="chlgr champ.png"Football Action 3">
+                    <p>Unforgettable moments from our biggest wins.</p>
+                </div>
             </div>
         </div>
     </section>
