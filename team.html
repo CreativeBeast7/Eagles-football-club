@@ -1,50 +1,125 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eagles Football Club - Team</title>
+    <title>Team - Eagles Football Club</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Navigation Bar -->
     <header class="main-header">
         <div class="logo">
-            <img src="eagle fc.png" alt="Eagles FC Logo" width="200px">
+            <img src="eagle fc.png" alt="Eagles FC Logo">
         </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="honours.html">Honours</a></li>
                 <li><a href="team.html">Team</a></li>
-                <li><a href="news.html">News & Our Village</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="our-village.html">Our Village</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Team Section -->
-    <section class="team">
-        <h1>Our Team</h1>
-        <div class="team-grid">
-            <div class="player">
-                <img src="player1.jpg" alt="Player 1" width="150px">
-                <h3>Name: John Doe</h3>
-                <p>Jersey Number: 7 | Age: 25</p>
-            </div>
-            <div class="player">
-                <img src="player2.jpg" alt="Player 2" width="150px">
-                <h3>Name: Alex Smith</h3>
-                <p>Jersey Number: 10 | Age: 23</p>
-            </div>
-            <!-- Add more player profiles here -->
-        </div>
+    <section class="hero">
+        <h1>Meet the Team</h1>
+        <p>Our dedicated players</p>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>Contact us:eaglesfcvizhinjam@gmail.com | Follow us on social media: @eagle fc vzm</p>
-    </footer>
+    <section class="team-details">
+        <h2>Players</h2>
+        <table>
+            <tr>
+                <td>13</td>
+                <td>GK</td>
+                <td>Hainz MJ</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>DF</td>
+                <td>Antony Raju</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>DF</td>
+                <td>Mukesh Hendry</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>DF</td>
+                <td>Sachin</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>FW</td>
+                <td>Sukesh</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>MF</td>
+                <td>Atheesh John</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>MF</td>
+                <td>Aniston</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>FW</td>
+                <td>Beniston</td>
+            </tr>
+            <tr>
+                <td>45</td>
+                <td>FW</td>
+                <td>Tinu</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>FW</td>
+                <td>Bijosh</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>DF</td>
+                <td>Bebin</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>DF</td>
+                <td>Shijin</td>
+            </tr>
+            <tr>
+                <td>77</td>
+                <td>FW</td>
+                <td>Vijay</td>
+            </tr>
+        </table>
+    </section>
 
+    <section class="matches">
+        <h2>Scheduled Matches</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Opponent</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>08/10/2024</td>
+                <td class="match" onclick="toggleSummary('match1-summary')">
+                    <img width="30px" class="team-image" src="Odisha_FC_logo.svg.png" alt="Eagles FC">
+                    Eagles FC vs Mumbai
+                    <img width="30px" class="team-image" src="Mumbai_City_FC_logo.svg.png" alt="Opponent>
+                </td>
+                <td>3 - 0 (Win)</td>
+            </tr>
+        </table>
+
+    <footer class="footer">
+        <p>&copy; 2024 Eagles Football Club. All rights reserved.</p>
+    </footer>
 </body>
 </html>
