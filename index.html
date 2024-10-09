@@ -1,13 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eagles Football Club</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Add the CSS styles for the sliding animation */
+        .matches {
+            background-color: #f4f4f4; /* Light gray background */
+            padding: 60px 20px;
+            text-align: center;
+            opacity: 0; /* Start hidden */
+            transform: translateX(-100%); /* Start off-screen left */
+            transition: opacity 0.5s, transform 0.5s; /* Animation for sliding in */
+        }
+
+        .matches.visible {
+            opacity: 1; /* Fade in */
+            transform: translateX(0); /* Move to original position */
+        }
+
+        .matches h2 {
+            color: #e10600; /* Red heading */
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .matches-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .upcoming-matches,
+        .past-matches {
+            width: 48%;
+            background-color: #ffffff; /* White background for match cards */
+            border: 2px solid #e10600; /* Red border */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .upcoming-matches h3,
+        .past-matches h3 {
+            color: #000000; /* Black for subheadings */
+            margin-bottom: 15px;
+        }
+
+        .match {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .match-details {
+            display: flex;
+            align-items: center;
+        }
+
+        .team-logo {
+            width: 50px; /* Team logo size */
+            margin: 0 10px;
+        }
+
+        .vs {
+            font-size: 1.5em;
+            color: #000000; /* Black for vs text */
+        }
+
+        .match-info {
+            text-align: right;
+        }
+
+        .match-info p {
+            margin: 5px 0;
+        }
+
+        /* Add your existing styles here */
+    </style>
 </head>
-<body>
-    <header class="main-header">
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container">
         <div class="logo">
             <img src="eagle fc.png" alt="Eagles FC Logo">
         </div>
@@ -17,24 +97,81 @@
                 <li><a href="honours.html">Honours</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="news.html">News</a></li>
-                <li><a href="our-village.html">Our Village</a></li>
+                <li><a href="village.html">Our Village</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
     <section class="hero">
-        <h1>Welcome to the Eagles FC Sports and Arts Club</h1>
-        <img src="profile.jpg" alt="Eagles FC Team Logo" style="width: 200px; margin-top: 30px;">
-        <h2>Rise Above the Rest with Eagle FC</h2>
+        <h1>Welcome to the Eagle FC Sports and Arts Club</h1>
+        <p>Rise Above the Rest with Eagle FC</p>
     </section>
 
+    <!-- Matches Section -->
+    <section class="matches" id="matches">
+        <h2>Matches</h2>
+        <div class="matches-container">
+            <!-- Upcoming Matches -->
+            <div class="upcoming-matches">
+                <h3>Upcoming Matches</h3>
+                <div class="match">
+                    <div class="match-details">
+                        <img width="20px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
+                        <span class="vs">vs</span>
+                        <img width="25px" src="FC_Goa_logo.svg.png" alt="Opponent Team" class="team-logo">
+                    </div>
+                    <div class="match-info">
+                        <p>Date: <span>October , 2024</span></p>
+                        <p>Time: <span>4:30 PM</span></p>
+                        <p>Venue: <span>st. mary's ground</span></p>
+                    </div>
+                </div>
+                <!-- Add more matches as needed -->
+            </div>
+
+            <!-- Past Matches -->
+            <div class="past-matches">
+                <h3>Past Matches</h3>
+                <div class="match">
+                    <div class="match-details">
+                        <img width="20px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
+                        <span class="vs">vs</span>
+                        <img width="25px" src="Mumbai_City_FC_logo.svg.png" alt="Opponent Team" class="team-logo">
+                    </div>
+                    <div class="match-info">
+                        <p>Date: <span>October 8, 2024</span></p>
+                        <p>Score: <span>Eagle FC 3 - 0 Mumbai</span></p>
+                    </div>
+                </div>
+                <!-- Add more matches as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
     <section class="about">
         <h2>About</h2>
-        <p>Founded in 2012, EagleFC is a passionate and dedicated football club based in Vizhinjam. Over the years, we have risen to become a formidable team in the local football scene. With an unyielding spirit and a commitment to excellence, we have proudly claimed victory in 5 major tournaments and secured runner-up positions in 4 others. Our journey is driven by teamwork, discipline, and a shared love for the game. As we continue to grow, we remain focused on achieving greater heights, always staying true to our core values of sportsmanship and community. Join us as we soar to new challenges and victories!</p>
+        <img src="profile.png" alt="About Logo" width="200">
+        <p>Founded in 2012, EagleFC is a passionate and dedicated football club based in Vizhinjam. Over the years, we have risen to become a formidable team in the local football scene. With an unyielding spirit and a commitment to excellence, we have proudly claimed victory in 5 major tournaments and secured runner-up positions in 4 others.
+            Our journey is driven by teamwork, discipline, and a shared love for the game. As we continue to grow, we remain focused on achieving greater heights, always staying true to our core values of sportsmanship and community.
+            Join us as we soar to new challenges and victories!...</p>
     </section>
+
+    <!-- Include more sections as needed -->
 
     <footer class="footer">
         <p>&copy; 2024 Eagles Football Club. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:eaglesfcvizhinjam@gmail.com">eaglesfcvizhinjam@gmail.com</a></p>
     </footer>
+
+    <script>
+        // JavaScript for sliding effect
+        document.addEventListener('DOMContentLoaded', function () {
+            const matchesSection = document.querySelector('.matches');
+            matchesSection.classList.add('visible'); // Add visible class to trigger animation
+        });
+    </script>
 </body>
+
 </html>
