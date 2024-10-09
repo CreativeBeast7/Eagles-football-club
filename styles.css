@@ -1,0 +1,246 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    margin: 20px 0;
+}
+
+h1 {
+    color: #e10600; /* Manchester United red */
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h2, h3 {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Header and Navigation */
+.main-header {
+    background-color: #000000; /* Black for the header */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e10600; /* Hover in red */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e10600; /* Manchester United red */
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('stadium-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* About Section */
+.about {
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    color: #e10600; /* Red for the About section heading */
+}
+
+.about p {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Honours Section */
+.honours {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.honours-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.honour {
+    width: 30%;
+    padding: 20px;
+}
+
+.honour img {
+    border-radius: 50%;
+    border: 4px solid #e10600;
+    margin-bottom: 15px;
+}
+
+.honour h3 {
+    color: #e10600; /* Red for Honour headings */
+    font-size: 1.5em;
+}
+
+/* Team Section */
+.team {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team .player {
+    width: 30%;
+}
+
+.team .player img {
+    border-radius: 50%;
+    border: 4px solid #000000;
+    margin-bottom: 10px;
+}
+
+.team h3 {
+    color: #000000;
+    font-size: 1.2em;
+}
+
+/* Village Section */
+.village-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.village {
+    width: 30%;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #e10600;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.village img {
+    width: 100%;
+    border-bottom: 4px solid #e10600;
+    border-radius: 8px 8px 0 0;
+}
+
+.village h3 {
+    color: #e10600;
+    margin-top: 15px;
+    font-size: 1.3em;
+}
+
+/* Footer */
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: #e10600;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .honours-grid, .team-grid, .village-grid {
+        flex-direction: column;
+    }
+
+    .honour, .player, .village {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+}

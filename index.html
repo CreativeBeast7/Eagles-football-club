@@ -4,165 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eagles Football Club</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        h1, h2 {
-            text-align: center;
-        }
-        .centered {
-            text-align: center;
-        }
-        .welcome-section {
-            margin-top: 3cm;
-        }
-        .logo {
-            width: 200px;
-        }
-        .about-section {
-            margin-top: 3cm;
-        }
-        .about-text {
-            width: 80%;
-            margin: 0 auto;
-            text-align: justify;
-        }
-        .circle-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
-        .honours-section {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 2cm;
-        }
-        .honour-item {
-            text-align: center;
-            width: 30%;
-        }
-        .team-picture {
-            display: block;
-            margin: 0 auto;
-            margin-top: 2cm;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Page 1: Welcome and About -->
-    <h1>Welcome to the Eagle FC Sports and Arts Club</h1>
-    <div class="welcome-section centered">
-        <img src="team-logo.png" alt="Team Logo" class="logo">
-        <h2>Rise Above the Rest with Eagle FC</h2>
-    </div>
+    <!-- Navigation Bar -->
+    <header class="main-header">
+        <div class="logo">
+            <img height="200px" width="800" src="eurocopa.png" alt="">
+            <img src="eagle fc.png" alt="Eagles FC Logo" width="200px">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="honours.html">Honours</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="news.html">News & Our Village</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="about-section centered">
-        <img src="team-logo.png" alt="Team Logo" class="logo">
-        <h2>About</h2>
-        <p class="about-text">
-            Founded in 2012, EagleFC is a passionate and dedicated football club based in Vizhinjam. Over the years, we have risen to become a formidable team in the local football scene. 
-            With an unyielding spirit and a commitment to excellence, we have proudly claimed victory in 5 major tournaments and secured runner-up positions in 4 others.
-            <br><br>
-            Our journey is driven by teamwork, discipline, and a shared love for the game. As we continue to grow, we remain focused on achieving greater heights, always staying true to our core values of sportsmanship and community.
-            <br><br>
-            Join us as we soar to new challenges and victories!
-        </p>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to the Eagle FC Sports and Arts Club</h1>
+        <p>Rise Above the Rest with Eagle FC</p>
+    </section>
 
-    <!-- Navigation to Page 2 -->
-    <div class="centered">
-        <a href="honours.html">Go to Honours Page</a>
-    </div>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eagle FC Honours</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        h1 {
-            text-align: center;
-        }
-        .centered {
-            text-align: center;
-        }
-        .circle-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
-        .honours-section {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 2cm;
-        }
-        .honour-item {
-            text-align: center;
-            width: 30%;
-        }
-        .team-picture {
-            display: block;
-            margin: 0 auto;
-            margin-top: 2cm;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Page 2: Honours -->
-    <h1>Honours</h1>
-
-    <div class="honours-section">
-        <div class="honour-item">
-            <img src="champions.jpg" alt="Champions" class="circle-img">
-            <h2>Champions</h2>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <img src="team-logo.png" alt="Eagles FC Logo" width="200px">
+            <h2>About Eagle FC</h2>
             <p>
-                EagleFC has proudly claimed 5 championship titles, with one in 2019, two in 2020, and two more in 2021. 
-                These victories reflect our team's consistent growth and dominance on the field over the years.
+                Founded in 2012, EagleFC is a passionate and dedicated football club based in Vizhinjam. 
+                Over the years, we have risen to become a formidable team in the local football scene. 
+                With an unyielding spirit and a commitment to excellence, we have proudly claimed victory in 5 major tournaments and secured runner-up positions in 4 others.
+                Our journey is driven by teamwork, discipline, and a shared love for the game.
             </p>
         </div>
+    </section>
 
-        <div class="honour-item">
-            <img src="runnerup.jpg" alt="Runner-up" class="circle-img">
-            <h2>Runner-up</h2>
-            <p>
-                EagleFC has also been runner-up in 4 tournaments, once in 2020 and three times in 2021. 
-                These close finishes further highlight our team's competitive spirit and determination.
-            </p>
-        </div>
-
-        <div class="honour-item">
-            <img src="born-to-win.jpg" alt="Born to Win" class="circle-img">
-            <h2>Born to Win</h2>
-            <p>
-                At EagleFC, we firmly believe in trusting the process, knowing that consistent effort and dedication lead to success. 
-                Every challenge we face strengthens our resolve, and we are confident that our hard work will continue to yield great results.
-            </p>
-        </div>
-    </div>
-
-    <!-- Session 2: Team Picture -->
-    <div class="centered">
-        <img src="team-picture.jpg" alt="Team Picture" class="team-picture" width="500px">
-    </div>
-
-    <!-- Navigation to Page 1 -->
-    <div class="centered">
-        <a href="index.html">Go back to Welcome Page</a>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Contact us: info@eaglesfc.com | Follow us on social media: @EaglesFC</p>
+    </footer>
 
 </body>
 </html>
