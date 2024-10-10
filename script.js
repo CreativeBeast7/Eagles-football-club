@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const honours = document.querySelectorAll('.honour');
     const players = document.querySelectorAll('.player');
 
+    // Fade-in effect for sections
+    const sections = document.querySelectorAll('.fade-in');
+    sections.forEach((section) => {
+        section.classList.add('visible');
+    });
+
     // Delay and animate honours
     honours.forEach((honour, index) => {
         honour.style.animationDelay = `${index * 0.2}s`;
@@ -14,7 +20,27 @@ document.addEventListener('DOMContentLoaded', () => {
         player.style.animationDelay = `${index * 0.2}s`;
         player.classList.add('animate');
     });
+
+    loadMatches(); // Load matches when DOM content is loaded
+
+    // Example of handling social media clicks
+    const socialMediaIcons = document.querySelectorAll('.social-media img');
+    socialMediaIcons.forEach((icon) => {
+        icon.addEventListener('click', (event) => {
+            const platform = event.target.alt;
+            switch (platform) {
+                case 'Facebook':
+                    window.open('https://www.facebook.com/Eaglessports7club', '_blank');
+                    break;
+                case 'Instagram':
+                    window.open('https://www.instagram.com/eagle_fc_vizhinjam/', '_blank');
+                    break;
+            }
+        });
+    });
 });
+
+// Upcoming and Past Matches Data
 const upcomingMatches = [
     {
         date: "October 15, 2024",
@@ -31,6 +57,7 @@ const pastMatches = [
     },
 ];
 
+// Function to Load Match Data
 function loadMatches() {
     const upcomingContainer = document.querySelector('.upcoming-matches');
     const pastContainer = document.querySelector('.past-matches');
@@ -71,19 +98,7 @@ function loadMatches() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', loadMatches);
-// JavaScript to trigger animations on page load
-document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('.section');
-    
-    sections.forEach((section, index) => {
-        setTimeout(() => {
-            section.classList.add('visible'); // Add visible class to trigger animation
-        }, index * 200); // Delay each section's animation by 200ms
-    });
-});
-
-// Optionally, add scroll event listener for more dynamic animations
+// Animation trigger on scroll
 window.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('.section');
     
@@ -96,33 +111,30 @@ window.addEventListener('scroll', function () {
         }
     });
 });
-mkdir js
-echo "// script.js
+
 // Sliding Animation for Match Fixtures
-const fixtures = document.querySelectorAll('.fixture'); // Assuming you have a class 'fixture' for match items
+const fixtures = document.querySelectorAll('.fixture');
 let currentIndex = 0;
 
 function showNextFixture() {
-    fixtures[currentIndex].classList.remove('active'); // Remove active class from current fixture
-    currentIndex = (currentIndex + 1) % fixtures.length; // Move to the next fixture
-    fixtures[currentIndex].classList.add('active'); // Add active class to the new fixture
+    fixtures[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % fixtures.length;
+    fixtures[currentIndex].classList.add('active');
 }
 
-// Automatically show next fixture every 3 seconds
 setInterval(showNextFixture, 3000);
 
 // Form Validation for Contact Form
-const contactForm = document.querySelector('#contactForm'); // Assuming your contact form has the ID 'contactForm'
-
+const contactForm = document.querySelector('#contactForm');
 contactForm.addEventListener('submit', function(event) {
-    const name = document.querySelector('#name').value; // Input with ID 'name'
-    const email = document.querySelector('#email').value; // Input with ID 'email'
-    
+    const name = document.querySelector('#name').value;
+    const email = document.querySelector('#email').value;
+
     if (name === '' || email === '') {
         event.preventDefault(); // Prevent form submission
         alert('Please fill in all fields.');
     } else {
-        alert('Thank you for your message!'); // Confirmation message
+        alert('Thank you for your message!');
     }
 });
 
@@ -132,36 +144,11 @@ const socialMediaLinks = {
     facebook: 'https://www.facebook.com/Eaglessports7club',
 };
 
-const socialMediaContainer = document.querySelector('.social-media'); // Assuming you have a container for social media links
-
+const socialMediaContainer = document.querySelector('.social-media');
 for (const platform in socialMediaLinks) {
     const link = document.createElement('a');
     link.href = socialMediaLinks[platform];
     link.target = '_blank';
-    link.textContent = platform.charAt(0).toUpperCase() + platform.slice(1); // Capitalize platform name
+    link.textContent = platform.charAt(0).toUpperCase() + platform.slice(1);
     socialMediaContainer.appendChild(link);
-}" > js/script.js
-',
-};
-
-const socialMediaContainer = document.querySelector('.social-media'); // Assuming you have a container for social media links
-
-for (const platform in socialMediaLinks) {
-    const link = document.createElement('a');
-    link.href = socialMediaLinks[platform];
-    link.target = '_blank';
-    link.textContent = platform.charAt(0).toUpperCase() + platform.slice(1); // Capitalize platform name
-    socialMediaContainer.appendChild(link);
-}" > js/script.js
-',
-};
-
-const socialMediaContainer = document.querySelector('.social-media'); // Assuming you have a container for social media links
-
-for (const platform in socialMediaLinks) {
-    const link = document.createElement('a');
-    link.href = socialMediaLinks[platform];
-    link.target = '_blank';
-    link.textContent = platform.charAt(0).toUpperCase() + platform.slice(1); // Capitalize platform name
-    socialMediaContainer.appendChild(link);
-}" > js/script.js
+}

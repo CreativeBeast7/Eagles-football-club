@@ -106,14 +106,56 @@
             border: 1px solid #e10600;
         }
 
+        /* Matches Section */
         .matches {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
             padding: 40px;
-            border-radius: 10px;
             margin-bottom: 40px;
-            animation: fadeIn 1s;
+            border-radius: 10px;
+            opacity: 1; /* Change from 0 to 1 */
+            transform: translateY(0); /* Reset initial transform */
+            transition: opacity 0.8s, transform 0.8s;
         }
 
+        .matches h2 {
+            color: #e10600;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .matches-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .upcoming-matches,
+        .past-matches {
+            width: 48%;
+            background-color: #ffffff;
+            border: 2px solid #e10600;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .match {
+            margin-bottom: 20px;
+            border: 1px solid #e10600;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .match-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .match-info p {
+            color: #000;
+        }
         .footer {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
@@ -136,6 +178,18 @@
 
         .social-media img:hover {
             transform: scale(1.2);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .gallery img,
+        .gallery video {
+            margin: 10px;
+            max-width: 300px; /* Adjust size as needed */
         }
     </style>
 </head>
@@ -166,32 +220,15 @@
             </a>
         </div>
     </header>
-    
+
     <section class="hero">
         <h1>Meet the Team</h1>
         <p>Our dedicated players</p>
     </section>
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Media Gallery</title>
-        <style>
-            .gallery {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            .gallery img, .gallery video {
-                margin: 10px;
-                max-width: 300px; /* Adjust size as needed */
-            }
-        </style>
-    </head>
-    <body>
+    <section class="media-gallery">
         <h1>Photo and Video Gallery</h1>
-    
+
         <h2>Photos</h2>
         <div class="gallery">
             <!-- Repeat this block for each image -->
@@ -205,7 +242,7 @@
             <img src="a8.png" alt="Description of image 8">
             <!-- Add more images up to image200.jpg -->
         </div>
-    
+
         <h2>Videos</h2>
         <div class="gallery">
             <!-- Repeat this block for each video -->
@@ -227,11 +264,7 @@
             </video>
             <!-- Add more videos up to video200.mp4 -->
         </div>
-    </body>
-    </html>
-    
-    
-
+    </section>
 
     <section class="team-details">
         <h2>Players</h2>
@@ -296,47 +329,57 @@
                 <td>DF</td>
                 <td>Bebin</td>
             </tr>
-            <tr>
-                <td>14</td>
-                <td>DF</td>
-                <td>Shijin</td>
-            </tr>
-            <tr>
-                <td>77</td>
-                <td>FW</td>
-                <td>Vijay</td>
-            </tr>
         </table>
     </section>
 
-    <section class="matches">
-        <h2>Scheduled Matches</h2>
-        <table>
-            <tr>
-                <th>Date</th>
-                <th>Opponent</th>
-                <th>Result</th>
-            </tr>
-            <tr>
-                <td>12/10/2024</td>
-                <td>
-                    <img width="20px" class="team-logo" src="Odisha_FC_logo.svg.png" alt="Eagles FC"> 
-                    Eagles FC vs 
-                    <img width="25px" class="team-logo" src="FC_Goa_logo.svg.png" alt="Goa FC"> 
-                    Goa at 4:30 PM
-                </td>
-                <td>Upcoming</td>
-            </tr>
-            <tr>
-                <td>08/10/2024</td>
-                <td>
-                    <img width="20px" class="team-logo" src="Odisha_FC_logo.svg.png" alt="Eagles FC"> 
-                    Eagles FC vs 
-                    <img width="25px" class="team-logo" src="Mumbai_City_FC_logo.svg.png" alt="Mumbai FC"> 
-                    Mumbai
-                </td>
-                <td>3 - 0 (Win)</td>
-            </tr>
+    <!-- Matches Section -->
+    <section class="matches" id="matches">
+        <h2>Matches</h2>
+        <div class="matches-container">
+            <!-- Upcoming Matches -->
+            <div class="upcoming-matches">
+                <h3>Upcoming Matches</h3>
+                <div class="match">
+                    <div class="match-details">
+                        <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
+                        <span class="vs">vs</span>
+                        <img width="60px" src="Hyderabad_Football_Club.svg.png" alt="Hyderabad FC" class="team-logo">
+                    </div>
+                    <div class="match-info">
+                        <p>Date: <span>October, 2024</span></p>
+                        <p>Time: <span>4:30 PM</span></p>
+                        <p>Venue: <span>St. Mary's Ground</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Matches -->
+            <div class="past-matches">
+                <h3>Past Matches</h3>
+                <div class="match">
+                    <div class="match-details">
+                        <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
+                        <span class="vs">vs</span>
+                        <img width="90px" src="Mumbai_City_FC_logo.svg.png" alt="Mumbai" class="team-logo">
+                    </div>
+                    <div class="match-info">
+                        <p>Date: <span>October 8, 2024</span></p>
+                        <p>Result: <span>Eagle FC 3 - 0 Mumbai </span></p>
+                    </div>
+                    <div class="match-details">
+                        <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
+                        <span class="vs">vs</span>
+                        <img width="90px" src="FC_Goa_logo.svg.png" alt="FC Goa" class="team-logo">
+                    </div>
+                    <div class="match-info">
+                        <p>Date: <span>October 10, 2024</span></p>
+                        <p>Result: <span>Eagle FC 3 - 0 Mumbai </span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <!-- Add more recent matches -->
         </table>
     </section>
 

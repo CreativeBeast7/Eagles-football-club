@@ -12,10 +12,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('background-image.jpg') no-repeat center center fixed; /* Change to your actual background image */
+            background: url('background-image.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #ffffff;
-            opacity: 0;
+            opacity: 1; /* Change from 0 to 1 */
             animation: fadeIn 1.5s ease-in-out forwards;
         }
 
@@ -23,14 +23,13 @@
             from {
                 opacity: 0;
             }
-
             to {
                 opacity: 1;
             }
         }
 
         .main-header {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgb(0, 159, 227);
             padding: 20px 0;
             animation: slideDown 1s ease-in-out;
         }
@@ -40,7 +39,6 @@
                 transform: translateY(-50px);
                 opacity: 0;
             }
-
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -57,7 +55,7 @@
 
         .logo img {
             width: 150px;
-            cursor: pointer; /* Add cursor pointer for clickable logo */
+            cursor: pointer;
         }
 
         .nav-links {
@@ -80,10 +78,10 @@
         .hero {
             text-align: center;
             padding: 100px 20px;
-            background: rgba(0, 0, 0, 0.6);
-            margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(50px);
+            background: rgb(255, 255, 255);
+            margin-bottom: 20px;
+            opacity: 1; /* Change from 0 to 1 */
+            transform: translateY(0); /* Reset initial transform */
             animation: fadeUp 1s ease-in-out forwards 0.5s;
         }
 
@@ -92,7 +90,6 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -101,33 +98,28 @@
 
         .hero h1 {
             font-size: 3em;
-            color: #ffffff;
+            color: #09c516;
         }
 
         .hero p {
             font-size: 1.5em;
-            color: #e10600;
+            color: #2a8dde;
         }
 
         /* Matches Section */
         .matches {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(0, 0, 0, 0.363);
             color: #000;
             padding: 40px;
             margin-bottom: 40px;
             border-radius: 10px;
-            opacity: 0;
-            transform: translateY(50px);
+            opacity: 1; /* Change from 0 to 1 */
+            transform: translateY(0); /* Reset initial transform */
             transition: opacity 0.8s, transform 0.8s;
         }
 
-        .matches.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         .matches h2 {
-            color: #e10600;
+            color: #ffffff;
             font-size: 2.5em;
             margin-bottom: 20px;
         }
@@ -141,49 +133,57 @@
         .upcoming-matches,
         .past-matches {
             width: 48%;
-            background-color: #ffffff;
-            border: 2px solid #e10600;
+            background-color: #2a8dde;
+            border: 2px solid #09c516;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
+        .match {
+            margin-bottom: 20px;
+            border: 1px solid #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .match-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         .match-info p {
-            color: #000;
+            color: #ffffff;
         }
 
         /* About Section */
         .about {
             padding: 40px;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgb(4, 117, 210);
             color: #ffffff;
             border-radius: 10px;
             margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(50px);
+            opacity: 1; /* Change from 0 to 1 */
+            transform: translateY(0); /* Reset initial transform */
             transition: opacity 0.8s, transform 0.8s;
         }
 
-        .about.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         .about h2 {
-            color: #e10600;
+            color: #09c516;
         }
 
         /* Footer */
         .footer {
-            background-color: #000000;
+            background-color: #09c516;
             padding: 20px;
             text-align: center;
             color: #ffffff;
         }
 
         .footer a {
-            color: #e10600;
+            color: #2a8dde;
             text-decoration: none;
             margin: 0 10px;
         }
@@ -217,7 +217,7 @@
     <header class="main-header">
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="eagle fc.png" alt="Eagles FC Logo"></a> <!-- Redirects to homepage -->
+                <a href="index.html"><img src="eagle fc.png" alt="Eagles FC Logo"></a>
             </div>
             <nav>
                 <ul class="nav-links">
@@ -248,7 +248,7 @@
                     <div class="match-details">
                         <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
                         <span class="vs">vs</span>
-                        <img width="90px" src="FC_Goa_logo.svg.png" alt="Opponent Team" class="team-logo">
+                        <img width="60px" src="Hyderabad_Football_Club.svg.png" alt="Hyderabad FC" class="team-logo">
                     </div>
                     <div class="match-info">
                         <p>Date: <span>October, 2024</span></p>
@@ -265,11 +265,20 @@
                     <div class="match-details">
                         <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
                         <span class="vs">vs</span>
-                        <img width="90px" src="Mumbai_City_FC_logo.svg.png" alt="Opponent Team" class="team-logo">
+                        <img width="90px" src="Mumbai_City_FC_logo.svg.png" alt="Mumbai" class="team-logo">
                     </div>
                     <div class="match-info">
                         <p>Date: <span>October 8, 2024</span></p>
-                        <p>Score: <span>Eagle FC 3 - 0 Mumbai</span></p>
+                        <p>Result: <span>Eagle FC 3 - 0 Mumbai </span></p>
+                    </div>
+                    <div class="match-details">
+                        <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
+                        <span class="vs">vs</span>
+                        <img width="90px" src="FC_Goa_logo.svg.png" alt="FC Goa" class="team-logo">
+                    </div>
+                    <div class="match-info">
+                        <p>Date: <span>October 10, 2024</span></p>
+                        <p>Result: <span>Eagle FC 3 - 0 Mumbai </span></p>
                     </div>
                 </div>
             </div>
