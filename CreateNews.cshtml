@@ -1,0 +1,15 @@
+@model EagleFCWebsite.Models.News
+
+<h2>Create News</h2>
+
+<form asp-action="Create">
+    <div>
+        <label for="Title">Title</label>
+        <input id="Title" name="Title" type="text" required />
+    </div>
+    <div>
+        <label for="Content">Content</label>
+        <textarea id="Content" name="Content" required></textarea>
+    </div>
+    <button type="submit">Submit</button>
+</form>

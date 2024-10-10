@@ -1,19 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Honours - Eagles Football Club</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add some initial animation */
+        body {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Honours background section */
+        .honours.hero {
+            background-image: url('your-background-image.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            color: white; /* Ensure the text is readable */
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        /* Social media icons */
+        .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Footer links */
+        .footer a {
+            color: #e10600; /* Matches the club's color scheme */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Adding hover effect to Honour items */
+        .honour {
+            transition: transform 0.3s ease;
+        }
+
+        .honour:hover {
+            transform: translateY(-10px);
+        }
+
+        /* For mobile responsiveness */
+        @media (max-width: 768px) {
+            .honours-grid {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .action-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Header -->
     <header class="main-header">
         <div class="container">
             <div class="logo">
-                <img src="eagle fc.png" alt="Eagles FC Logo">
+                <a href="index.html"><img src="eagle fc.png" alt="Eagles FC Logo"></a>
             </div>
             <nav>
                 <ul class="nav-links">
@@ -83,9 +153,16 @@
         </div>
     </section>
 
+    <!-- Footer with social media icons -->
     <footer class="footer">
-        <p>Contact us: <a href="mailto:eaglesfcvizhinjam@gmail.com">eaglesfcvizhinjam@gmail.com</a> | Instagram: <a href="https://instagram.com/eagle_fc_vizhinjam/">eagle_fc_vizhinjam</a> | Facebook: <a href="https://facebook.com/EaglesSportsClubVZM">Eagles Sports Club VZM</a></p>
-        <p>Address: Kottapuram, Vizhinjam</p>
+        <div class="container">
+            <div class="social-icons">
+                <a href="mailto:eaglesfcvizhinjam@gmail.com"><img src="Gmail_icon_(2020).svg.png" alt="Email"></a>
+                <a href="https://www.instagram.com/eagle_fc_vizhinjam//"><img src="Instagram_logo_2022.svg.webp" alt="Instagram"></a>
+                <a href="https://www.facebook.com/Eaglessports7club"><img src="2023_Facebook_icon.svg.png" alt="Facebook"></a>
+            </div>
+            <p>Address: Kottapuram, Vizhinjam</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

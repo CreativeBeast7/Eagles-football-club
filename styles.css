@@ -1,472 +1,3 @@
-/* Responsive */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .products {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-item {
-        flex-basis: 100%;
-        max-width: 400px;
-    }
-}
-
-
-/* Header and Navigation */
-.main-header {
-    background-color:   #00a9e1; /* Manchester United red */
-    color: #00ff33;
-    padding: 20px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    animation: slideDown 1s ease-out; /* Header slide down animation */
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.logo img {
-    width: 100px;
-    transition: transform 0.5s ease, filter 0.5s; /* Smooth image scale on hover */
-}
-
-.logo img:hover {
-    transform: scale(1.1); /* Hover effect on logo */
-    filter: brightness(1.3); /* Increase brightness on hover */
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0 20px;
-}
-
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s, transform 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-    color: #00ff33; /* Hover color change to gold/yellow */
-    transform: scale(1.1); /* Slight grow effect */
-}
-
-/* Hero Section */
-.hero {
-    background-image: url('assets/old-trafford.jpg'); /* Hero section background */
-    background-size: cover;
-    background-position: center;
-    color: #00a9e1;
-    text-align: center;
-    padding: 100px 20px;
-    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.hero h1 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    opacity: 0;
-    animation: slideUp 1.5s ease-in-out forwards; /* Slide up text animation */
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero p {
-    font-size: 1.5em;
-    font-style: italic;
-    opacity: 0;
-    animation: slideUp 2s ease-in-out forwards;
-}
-
-/* Honours Section */
-.honours {
-    background-color: #f2f2f2;
-    padding: 60px 20px;
-    text-align: center;
-    animation: zoomIn 1s ease-in-out; /* Honours section zoom effect */
-}
-
-@keyframes zoomIn {
-    from {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.honours-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.honour {
-    width: 30%;
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
-}
-
-.honour img {
-    border-radius: 50%;
-    border: 4px solid #e10600; /* Red border to match Manchester United colors */
-    margin-bottom: 20px;
-    transition: transform 0.5s ease;
-}
-
-.honour:hover img {
-    transform: rotate(360deg); /* 360 rotation on hover */
-}
-
-.honour:hover {
-    transform: scale(1.05); /* Grow effect on hover */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
-
-/* Team Section */
-.team {
-    background-color: #00ff33;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.team-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.team .player img {
-    border-radius: 50%;
-    border: 4px solid #e10600;
-    margin-bottom: 10px;
-    transition: transform 0.3s, border-color 0.3s ease-in-out;
-}
-
-.team .player img:hover {
-    transform: scale(1.1); /* Image zoom on hover */
-    border-color: #ffcc00; /* Change border color to gold */
-}
-
-.team h3 {
-    color: #333333;
-    font-size: 1.2em;
-    transition: color 0.3s ease-in-out;
-}
-
-.team h3:hover {
-    color: #e10600; /* Team player name turns red on hover */
-}
-
-/* Village Section */
-.village-grid {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    gap: 20px;
-}
-
-.village-item {
-    width: 30%;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.village-item img {
-    width: 100%;
-    border-bottom: 4px solid #e10600;
-    border-radius: 8px 8px 0 0;
-}
-
-.village-item:hover {
-    transform: scale(1.05); /* Scale village item on hover */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
-}
-
-.village h3 {
-    color: #e10600;
-    margin-top: 15px;
-    font-size: 1.3em;
-}
-
-/* Footer */
-.footer {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-    animation: slideUp 1s ease-out; /* Footer slide up animation */
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-/* General reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Helvetica', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header */
-header {
-    background-color: #0d0d0d; /* Dark background for header */
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header img {
-    height: 40px; /* Adjust logo size */
-}
-
-header nav a {
-    color: white;
-    margin-left: 1.5rem;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-header nav a:hover {
-    color: #FF3366; /* Color change on hover */
-}
-
-header .icons {
-    display: flex;
-    align-items: center;
-}
-
-header .icons a {
-    margin-left: 1rem;
-    color: white;
-    font-size: 1.2rem;
-}
-
-/* Hero Section */
-.hero {
-    background: url('eurocopa.png') no-repeat center center/cover; /* Placeholder for your cover image */
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.hero-overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.hero-content {
-    z-index: 1; /* Ensure content is above the overlay */
-    max-width: 800px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-}
-
-.hero a {
-    background-color: #FF3366;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.hero a:hover {
-    background-color: #e22a5c;
-}
-
-/* Products Section */
-.products {
-    padding: 4rem 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.5rem;
-}
-
-.product-item {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    flex-basis: calc(33% - 1rem); /* Responsive grid */
-    overflow: hidden;
-}
-
-.product-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.product-info {
-    padding: 1rem;
-}
-
-.product-info h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.product-info p {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 1rem;
-}
-
-.product-info .price {
-    font-size: 1.2rem;
-    color: #FF3366;
-    font-weight: bold;
-}
-
-.product-info .btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #FF3366;
-    color: white;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.product-info .btn:hover {
-    background-color: #e22a5c;
-}
-
-/* Footer */
-footer {
-    background-color: #0d0d0d;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-}
-
-footer p {
-    font-size: 0.9rem;
-}
-
-footer a {
-    color: #FF3366;
-    text-decoration: none;
-    margin-left: 0.5rem;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-
-
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-    }
-
-    .honours-grid, .team-grid, .village-grid {
-        flex-direction: column;
-    }
-
-    .honour, .player, .village-item {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .hero h1 {
-        font-size: 2.5em;
-    }
-
-    .hero p {
-        font-size: 1.2em;
-    }
-}mkdir css
-echo "/* styles.css */
-
 /* Global Styling */
 body {
     font-family: 'Arial', sans-serif; /* You can replace this with a Google Font */
@@ -504,46 +35,256 @@ button:hover {
     background-color: #2980b9; /* Darker shade on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Stack navigation items on smaller screens */
-    }
-
-    header {
-        text-align: center;
-    }
-
-    main {
-        padding: 10px; /* Less padding for smaller screens */
-    }
+/* Header and Navigation */
+.main-header {
+    background-color: #00a9e1;
+    color: #00ff33;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    animation: slideDown 1s ease-out;
 }
 
-/* Animations */
-@keyframes fadeIn {
+@keyframes slideDown {
     from {
+        transform: translateY(-100%);
         opacity: 0;
     }
     to {
+        transform: translateY(0);
         opacity: 1;
     }
 }
 
-main {
-    animation: fadeIn 1s ease-in; /* Fade in effect for the main content */
+.logo img {
+    width: 100px;
+    transition: transform 0.5s ease, filter 0.5s;
 }
 
-/* Adjustments for mobile */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px; /* Smaller heading size for mobile */
+.logo img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #00ff33;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/old-trafford.jpg') no-repeat center center/cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-content {
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.hero a {
+    background-color: #FF3366;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+    background-color: #e22a5c;
+}
+
+/* Honours Section */
+.honours {
+    background-color: #f2f2f2;
+    padding: 60px 20px;
+    text-align: center;
+    animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.honours-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.honour {
+    width: 30%;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.honour img {
+    border-radius: 50%;
+    border: 4px solid #e10600;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.honour:hover img {
+    transform: rotate(360deg);
+}
+
+.honour:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Section */
+.team {
+    background-color: #00ff33;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.team .player img {
+    border-radius: 50%;
+    border: 4px solid #e10600;
+    margin-bottom: 10px;
+    transition: transform 0.3s, border-color 0.3s ease-in-out;
+}
+
+.team .player img:hover {
+    transform: scale(1.1);
+    border-color: #ffcc00;
+}
+
+.team h3 {
+    color: #333333;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+.team h3:hover {
+    color: #e10600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
     }
 
-    h2 {
-        font-size: 20px; /* Smaller subheading size for mobile */
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        flex-basis: 100%;
+        max-width: 400px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .honours-grid, .team-grid, .village-grid {
+        flex-direction: column;
+    }
+
+    .honour, .player, .village-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    main {
+        padding: 10px;
     }
 
     button {
-        width: 100%; /* Full-width buttons on mobile */
+        width: 100%;
     }
-}" > css/styles.css
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

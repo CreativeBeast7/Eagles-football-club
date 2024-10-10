@@ -1,0 +1,26 @@
+@model IEnumerable<EagleFCWebsite.Models.Player>
+
+<h2>Players</h2>
+<a href="/Players/Create">Add New Player</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Jersey Number</th>
+            <th>Country</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var player in Model)
+        {
+            <tr>
+                <td>@player.Name</td>
+                <td>@player.Position</td>
+                <td>@player.JerseyNumber</td>
+                <td>@player.Country</td>
+            </tr>
+        }
+    </tbody>
+</table>
