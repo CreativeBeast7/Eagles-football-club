@@ -1,290 +1,171 @@
-/* Global Styling */
+/* General styles */
 body {
-    font-family: 'Arial', sans-serif; /* You can replace this with a Google Font */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light background color */
-    color: #333; /* Dark text color */
+    background: url('background-image1.jpg') no-repeat center center fixed; /* Default background */
+    background-size: cover;
+    color: #ffffff;
+    transition: background 0.5s ease-in-out;
 }
 
-h1, h2, h3 {
-    color: #2c3e50; /* Primary color */
-}
-
-a {
-    color: #3498db; /* Link color */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Button Styles */
-button {
-    background-color: #3498db; /* Button color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-button:hover {
-    background-color: #2980b9; /* Darker shade on hover */
-}
-
-/* Header and Navigation */
+/* Header styles */
 .main-header {
-    background-color: #00a9e1;
-    color: #00ff33;
-    padding: 20px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
     z-index: 1000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    animation: slideDown 1s ease-out;
+    animation: slideDown 0.5s ease-in-out;
 }
 
 @keyframes slideDown {
     from {
         transform: translateY(-100%);
-        opacity: 0;
     }
     to {
         transform: translateY(0);
-        opacity: 1;
     }
 }
 
 .logo img {
-    width: 100px;
-    transition: transform 0.5s ease, filter 0.5s;
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .logo img:hover {
     transform: scale(1.1);
-    filter: brightness(1.3);
 }
 
 .nav-links {
-    display: flex;
-    justify-content: center;
     list-style: none;
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
 }
 
 .nav-links a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s, transform 0.3s ease-in-out;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #00ff33;
-    transform: scale(1.1);
+    color: #e10600;
 }
 
 /* Hero Section */
 .hero {
-    background: url('assets/old-trafford.jpg') no-repeat center center/cover;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     text-align: center;
-    color: white;
+    padding: 150px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    margin-top: 60px; /* Prevent overlap with header */
+    animation: fadeIn 1s ease-in-out;
 }
 
-.hero-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.hero-content {
-    z-index: 1;
-    max-width: 800px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-}
-
-.hero a {
-    background-color: #FF3366;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.hero a:hover {
-    background-color: #e22a5c;
-}
-
-/* Honours Section */
-.honours {
-    background-color: #f2f2f2;
-    padding: 60px 20px;
-    text-align: center;
-    animation: zoomIn 1s ease-in-out;
-}
-
-@keyframes zoomIn {
-    from {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.honours-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.honour {
-    width: 30%;
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
-}
-
-.honour img {
-    border-radius: 50%;
-    border: 4px solid #e10600;
-    margin-bottom: 20px;
-    transition: transform 0.5s ease;
-}
-
-.honour:hover img {
-    transform: rotate(360deg);
-}
-
-.honour:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Team Section */
-.team {
-    background-color: #00ff33;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.team-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.team .player img {
-    border-radius: 50%;
-    border: 4px solid #e10600;
-    margin-bottom: 10px;
-    transition: transform 0.3s, border-color 0.3s ease-in-out;
-}
-
-.team .player img:hover {
-    transform: scale(1.1);
-    border-color: #ffcc00;
-}
-
-.team h3 {
-    color: #333333;
-    font-size: 1.2em;
-    transition: color 0.3s ease-in-out;
-}
-
-.team h3:hover {
+    font-size: 3em;
     color: #e10600;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .products {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-item {
-        flex-basis: 100%;
-        max-width: 400px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-    }
-
-    .honours-grid, .team-grid, .village-grid {
-        flex-direction: column;
-    }
-
-    .honour, .player, .village-item {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .hero p {
-        font-size: 1.2em;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    button {
-        width: 100%;
-    }
+.hero p {
+    font-size: 1.5em;
 }
 
-/* Footer */
-footer {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 20px 0;
+/* News Section */
+.news {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 40px 20px;
+    border-radius: 10px;
     text-align: center;
-    animation: slideUp 1s ease-out;
+    animation: fadeUp 1s ease-in-out forwards;
 }
 
-@keyframes slideUp {
+@keyframes fadeUp {
     from {
-        transform: translateY(100%);
         opacity: 0;
+        transform: translateY(50px);
     }
     to {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+.news-details {
+    margin: 20px 0;
+}
+
+/* Village Section */
+.village-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.village {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.village:hover {
+    transform: scale(1.05);
+}
+
+.village img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.footer a {
+    color: #e10600;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-media img {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
 }

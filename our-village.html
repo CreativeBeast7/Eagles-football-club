@@ -5,47 +5,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Village - Eagles Football Club</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .main-header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e10600;
+        }
+
+        .news {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeUp 1s ease-in-out forwards 0.5s;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .village-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeUp 1s ease-in-out forwards 1s;
+        }
+
+        .village {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .village:hover {
+            transform: scale(1.05);
+        }
+
+        .village img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .footer a {
+            color: #e10600;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Social Media Icons */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .social-media img {
+            width: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-media img:hover {
+            transform: scale(1.2);
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
-        <div class="logo">
-            <img src="eagle fc.png" alt="Eagles FC Logo">
+        <div class="container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <img src="eagle fc.png" alt="Eagles FC Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="honours.html">Honours</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="our-village.html">Our Village</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="honours.html">Honours</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="our-village.html">Our Village</a></li>
-            </ul>
-        </nav>
     </header>
 
     <section class="news">
-        <h1>About our Village</h1>
+        <h1>About Our Village</h1>
         <div class="village-grid">
             <div class="village">
-                <img src="christ the redeemer.webp" alt="Vizhinjam" width="150px">
+                <img src="christ the redeemer.webp" alt="Vizhinjam">
                 <h3>Vizhinjam</h3>
-                <p> Vizhinjam is a coastal town located in the southern part of Kerala, known for its scenic beauty and vibrant fishing community. It has a rich maritime history and is home to the Vizhinjam International Seaport, which is set to become a major hub for global trade. The town’s picturesque beaches and cultural heritage make it a unique blend of tradition and modern development...</p>
+                <p>Vizhinjam is a coastal town located in the southern part of Kerala, known for its scenic beauty and vibrant fishing community. It has a rich maritime history and is home to the Vizhinjam International Seaport, which is set to become a major hub for global trade. The town’s picturesque beaches and cultural heritage make it a unique blend of tradition and modern development.</p>
             </div>
             <div class="village">
-                <img src="st mary.png" alt="Our Lady Of Good Voyage" width="150px">
+                <img src="st mary.png" alt="Our Lady Of Good Voyage">
                 <h3>Our Lady Of Good Voyage</h3>
-                <p> The Old Portuguese Church in Vizhinjam, also known as the Vizhinjam St. Mary’s Church, is a historic structure that dates back to the colonial era. Built by the Portuguese in the 16th century, it stands as a symbol of the region’s rich Christian heritage and European influence. Though weathered by time, the church remains an important religious and historical site, reflecting the cultural exchange between Portugal and Kerala. 
-
-                    ...</p>
+                <p>The Old Portuguese Church in Vizhinjam, also known as the Vizhinjam St. Mary’s Church, is a historic structure that dates back to the colonial era. Built by the Portuguese in the 16th century, it stands as a symbol of the region’s rich Christian heritage and European influence. Though weathered by time, the church remains an important religious and historical site, reflecting the cultural exchange between Portugal and Kerala.</p>
             </div>
             <div class="village">
-                <img src="old church.webp" alt="Vizhinjam old Portugese church" width="150px">
+                <img src="old church.webp" alt="Vizhinjam Old Portuguese Church">
                 <h3>Vizhinjam Old Portuguese Church</h3>
-                <p> The Old Portuguese Church in Vizhinjam, also known as the Vizhinjam St. Mary’s Church, is a historic structure that dates back to the colonial era. Built by the Portuguese in the 16th century, it stands as a symbol of the region’s rich Christian heritage and European influence. Though weathered by time, the church remains an important religious and historical site, reflecting the cultural exchange between Portugal and Kerala. 
-
-                    ...</p>
+                <p>The Old Portuguese Church in Vizhinjam is a historic structure that dates back to the colonial era. Built by the Portuguese in the 16th century, it stands as a symbol of the region’s rich Christian heritage and European influence. Though weathered by time, the church remains an important religious and historical site, reflecting the cultural exchange between Portugal and Kerala.</p>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <p>&copy; 2024 Eagles Football Club. All rights reserved.</p>
+        <div class="social-media">
+            <a href="mailto:eaglesfcvizhinjam@gmail.com"><img src="Gmail_icon_(2020).svg.png" alt="Email"></a>
+            <a href="https://www.instagram.com/eagle_fc_vizhinjam/" target="_blank"><img src="Instagram_logo_2022.svg.webp" alt="Instagram"></a>
+            <a href="https://www.facebook.com/Eaglessports7club" target="_blank"><img src="2023_Facebook_icon.svg.png" alt="Facebook"></a>
+        </div>
     </footer>
 </body>
 </html>
