@@ -96,3 +96,72 @@ window.addEventListener('scroll', function () {
         }
     });
 });
+mkdir js
+echo "// script.js
+// Sliding Animation for Match Fixtures
+const fixtures = document.querySelectorAll('.fixture'); // Assuming you have a class 'fixture' for match items
+let currentIndex = 0;
+
+function showNextFixture() {
+    fixtures[currentIndex].classList.remove('active'); // Remove active class from current fixture
+    currentIndex = (currentIndex + 1) % fixtures.length; // Move to the next fixture
+    fixtures[currentIndex].classList.add('active'); // Add active class to the new fixture
+}
+
+// Automatically show next fixture every 3 seconds
+setInterval(showNextFixture, 3000);
+
+// Form Validation for Contact Form
+const contactForm = document.querySelector('#contactForm'); // Assuming your contact form has the ID 'contactForm'
+
+contactForm.addEventListener('submit', function(event) {
+    const name = document.querySelector('#name').value; // Input with ID 'name'
+    const email = document.querySelector('#email').value; // Input with ID 'email'
+    
+    if (name === '' || email === '') {
+        event.preventDefault(); // Prevent form submission
+        alert('Please fill in all fields.');
+    } else {
+        alert('Thank you for your message!'); // Confirmation message
+    }
+});
+
+// Social Media Integration
+const socialMediaLinks = {
+    instagram: 'https://instagram.com/eagle_fc_vizhinjam/',
+    facebook: 'https://www.facebook.com/Eaglessports7club',
+};
+
+const socialMediaContainer = document.querySelector('.social-media'); // Assuming you have a container for social media links
+
+for (const platform in socialMediaLinks) {
+    const link = document.createElement('a');
+    link.href = socialMediaLinks[platform];
+    link.target = '_blank';
+    link.textContent = platform.charAt(0).toUpperCase() + platform.slice(1); // Capitalize platform name
+    socialMediaContainer.appendChild(link);
+}" > js/script.js
+',
+};
+
+const socialMediaContainer = document.querySelector('.social-media'); // Assuming you have a container for social media links
+
+for (const platform in socialMediaLinks) {
+    const link = document.createElement('a');
+    link.href = socialMediaLinks[platform];
+    link.target = '_blank';
+    link.textContent = platform.charAt(0).toUpperCase() + platform.slice(1); // Capitalize platform name
+    socialMediaContainer.appendChild(link);
+}" > js/script.js
+',
+};
+
+const socialMediaContainer = document.querySelector('.social-media'); // Assuming you have a container for social media links
+
+for (const platform in socialMediaLinks) {
+    const link = document.createElement('a');
+    link.href = socialMediaLinks[platform];
+    link.target = '_blank';
+    link.textContent = platform.charAt(0).toUpperCase() + platform.slice(1); // Capitalize platform name
+    socialMediaContainer.appendChild(link);
+}" > js/script.js

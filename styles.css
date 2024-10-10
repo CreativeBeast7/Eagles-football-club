@@ -464,4 +464,86 @@ footer a:hover {
     .hero p {
         font-size: 1.2em;
     }
+}mkdir css
+echo "/* styles.css */
+
+/* Global Styling */
+body {
+    font-family: 'Arial', sans-serif; /* You can replace this with a Google Font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Dark text color */
 }
+
+h1, h2, h3 {
+    color: #2c3e50; /* Primary color */
+}
+
+a {
+    color: #3498db; /* Link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Button Styles */
+button {
+    background-color: #3498db; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items on smaller screens */
+    }
+
+    header {
+        text-align: center;
+    }
+
+    main {
+        padding: 10px; /* Less padding for smaller screens */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main {
+    animation: fadeIn 1s ease-in; /* Fade in effect for the main content */
+}
+
+/* Adjustments for mobile */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Smaller heading size for mobile */
+    }
+
+    h2 {
+        font-size: 20px; /* Smaller subheading size for mobile */
+    }
+
+    button {
+        width: 100%; /* Full-width buttons on mobile */
+    }
+}" > css/styles.css
