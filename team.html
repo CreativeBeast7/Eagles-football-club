@@ -78,7 +78,7 @@
         .hero {
             text-align: center;
             padding: 100px 20px;
-            background: rgba(0, 0, 0, 0.6);
+            background-image: url(white.jpeg);
             margin-bottom: 40px;
         }
 
@@ -87,6 +87,7 @@
         }
 
         .team-details {
+            background-image: url(yellow\ gradient.jpg);
             background-color: rgba(0, 0, 0, 0.8);
             padding: 40px;
             border-radius: 10px;
@@ -97,7 +98,7 @@
         .team-details table {
             width: 100%;
             border-collapse: collapse;
-            color: #ffffff;
+            color: #000000;
         }
 
         .team-details table th,
@@ -119,7 +120,7 @@
         }
 
         .matches h2 {
-            color: #e10600;
+            color: #ffffff;
             font-size: 2.5em;
             margin-bottom: 20px;
         }
@@ -133,16 +134,17 @@
         .upcoming-matches,
         .past-matches {
             width: 48%;
+            background-image: url(colour\ full\ 2.jpg);
             background-color: #ffffff;
-            border: 2px solid #e10600;
+            border: 2px solid #ffffff;
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgb(0, 0, 0);
         }
 
         .match {
             margin-bottom: 20px;
-            border: 1px solid #e10600;
+            border: 1px solid #fffefe;
             padding: 10px;
             border-radius: 5px;
         }
@@ -332,53 +334,64 @@
         </table>
     </section>
 
-    <!-- Matches Section -->
-    <section class="matches" id="matches">
-        <h2>Matches</h2>
-        <div class="matches-container">
-            <!-- Upcoming Matches -->
-            <div class="upcoming-matches">
-                <h3>Upcoming Matches</h3>
-                <div class="match">
-                    <div class="match-details">
-                        <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
-                        <span class="vs">vs</span>
-                        <img width="60px" src="Hyderabad_Football_Club.svg.png" alt="Hyderabad FC" class="team-logo">
-                    </div>
-                    <div class="match-info">
-                        <p>Date: <span>October, 2024</span></p>
-                        <p>Time: <span>4:30 PM</span></p>
-                        <p>Venue: <span>St. Mary's Ground</span></p>
-                    </div>
-                </div>
-            </div>
+   <!-- Hero Section -->
+   <section class="hero">
+    <h1>Welcome to Eagle FC Sports and Arts Club</h1>
+    <p>Rise Above the Rest with Eagle FC</p>
+</section>
 
-            <!-- Past Matches -->
-            <div class="past-matches">
-                <h3>Past Matches</h3>
-                <div class="match">
-                    <div class="match-details">
-                        <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
-                        <span class="vs">vs</span>
-                        <img width="90px" src="Mumbai_City_FC_logo.svg.png" alt="Mumbai" class="team-logo">
-                    </div>
-                    <div class="match-info">
-                        <p>Date: <span>October 8, 2024</span></p>
-                        <p>Result: <span>Eagle FC 3 - 0 Mumbai </span></p>
-                    </div>
-                    <div class="match-details">
-                        <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
-                        <span class="vs">vs</span>
-                        <img width="90px" src="FC_Goa_logo.svg.png" alt="FC Goa" class="team-logo">
-                    </div>
-                    <div class="match-info">
-                        <p>Date: <span>October 10, 2024</span></p>
-                        <p>Result: <span>Eagle FC 3 - 0 Mumbai </span></p>
-                    </div>
+<!-- Matches Section -->
+<section class="matches" id="matches">
+    <h2>Matches</h2>
+    <div class="matches-container">
+        <!-- Upcoming Matches -->
+        <div class="upcoming-matches">
+            <h3>Upcoming Matches</h3>
+            <div class="match">
+                <div class="match-details">
+                    <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
+                    <span class="vs">vs</span>
+                    <img width="60px" src="Hyderabad_Football_Club.svg.png" alt="Hyderabad FC" class="team-logo">
+                </div>
+                <div class="match-info">
+                    <p>Date: <span>October, 2024</span></p>
+                    <p>Time: <span>4:30 PM</span></p>
+                    <p>Venue: <span>St. Mary's Ground</span></p>
                 </div>
             </div>
         </div>
-    </section>
+
+
+        <!-- Past Matches -->
+        <div class="past-matches">
+            <h3>Past Matches</h3>
+            <div class="match">
+                <div class="match-details">
+                    <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
+                    <span class="vs">vs</span>
+                    <img width="90px" src="Mumbai_City_FC_logo.svg.png" alt="Mumbai" class="team-logo">
+                </div>
+                <div class="match-info">
+                    <p>Date: <span>October 8, 2024</span></p>
+                    <p>Result: <span>Eagle FC 3 - 0 Mumbai </span></p>
+                </div>
+            </div>
+        </div>
+        <div class="past-matches">    
+            <h3>Past Matches</h3>
+                <div class="match-details">
+                    <img width="80px" src="Odisha_FC_logo.svg.png" alt="Eagle FC" class="team-logo">
+                    <span class="vs">vs</span>
+                    <img width="90px" src="FC_Goa_logo.svg.png" alt="FC Goa" class="team-logo">
+                </div>
+                <div class="match-info">
+                    <p>Date: <span>October 10, 2024</span></p>
+                    <p>Result: <span>Eagle FC 3 - 0 Mumbai </span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
             <!-- Add more recent matches -->
         </table>
     </section>
